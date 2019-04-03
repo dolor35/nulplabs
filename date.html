@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Labs | Звіти</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="header">
+    <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <img src="media/dolores.png" alt="" class="rounded-circle">
+        <h1> Hello World <small>(✿◕‿◕)</small></h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="breadcrumps">
+    <div class="container">
+
+    <div class="row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a href="index.html"> Головна&nbsp;&nbsp;</a></li>
+          <span> / </span>
+          <li><a href="#">&nbsp;Дата&nbsp;&nbsp;</a></li>
+        </ol>
+      </div>
+    </div>
+
+    </div>
+
+  </section>
+
+  <br>
+
+  <section class="posts">
+    <div class="container">
+      <div class="page">
+        <h3>Дата</h3>
+         <div class="details">
+           <ul>
+             <li>Кириченко Дар'я</li>
+             <li>2 Квітня, 2019</li>
+             <li>Інтернет-технології</li>
+          </ul>
+          </div>
+           <div class="content">
+             <p> Якщо хочете дізнатися поточну дату та час, натисніть на кнопку: </p>
+           </div>
+           <button class="btn btn-primary" type="button" name="button" onclick="GetNowDate()">Котра година?</button>
+        </div>
+      </div>
+  </section>
+
+<script type="text/javascript">
+  var now = new Date();
+
+  function GetNowDate() {
+    alert( "Дата:" + (now.getMonth()+1) + "/" + now.getDate() + "/" + (1900 + now.getYear()) + "\nЧас:" + now.getHours()+ ":" + now.getMinutes()  );
+    }
+</script>
+
+</body>
+</html>

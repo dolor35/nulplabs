@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Labs | Звіти</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="header">
+    <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <img src="media/dolores.png" alt="" class="rounded-circle">
+        <h1> Hello World <small>(✿◕‿◕)</small></h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="breadcrumps">
+    <div class="container">
+
+    <div class="row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a href="index.html"> Головна&nbsp;&nbsp;</a></li>
+          <span> / </span>
+          <li><a href="#">&nbsp;Вгадати число&nbsp;&nbsp;</a></li>
+        </ol>
+      </div>
+    </div>
+
+    </div>
+
+  </section>
+
+  <br>
+
+  <section class="posts">
+    <div class="container">
+      <div class="page">
+        <h3>Гра "Вгадай число"</h3>
+         <div class="details">
+           <ul>
+             <li>Кириченко Дар'я</li>
+             <li>2 Квітня, 2019</li>
+             <li>Інтернет-технології</li>
+          </ul>
+          </div>
+           <div class="content">
+             <p> Я загадала число від 1 до 10. Подивимося, чи зможеш вгадати! </p>
+             <form>
+               <div class="form-group">
+                 <label for="guessField">Ваше число:</label>
+                 <input type="text" class="form-control guessField" id="guessField">
+               </div>
+                <button type="submit" class="btn btn-primary guessSubmit" id="submitGuess">Вгадати</button>
+             </form>
+           </div>
+        </div>
+      </div>
+  </section>
+
+<script language="JavaScript">
+    var y = Math.floor(Math.random() * 10 + 1);
+    var guess = 1;
+
+    document.getElementById("submitGuess").onclick = function(){
+
+   var x = document.getElementById("guessField").value;
+
+   if(x == y)
+   {
+       alert("Вітаю, Ви вгадали "
+               + y + " - моє число ");
+   }
+   else if(x > y)
+   {
+       guess++;
+       alert("Нажаль, Ви не вгадали! Спробуйте число менше");
+   }
+   else
+   {
+       guess++;
+       alert("Нажаль, Ви не вгадали! Спробуйте число більше")
+   }
+}
+</script>
+
+</body>
+</html>

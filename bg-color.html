@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Labs | Звіти</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="header">
+    <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <img src="media/dolores.png" alt="" class="rounded-circle">
+        <h1> Hello World <small>(✿◕‿◕)</small></h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="breadcrumps">
+    <div class="container">
+
+    <div class="row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a href="index.html"> Головна&nbsp;&nbsp;</a></li>
+          <span> / </span>
+          <li><a href="#">&nbsp;Колір фону&nbsp;&nbsp;</a></li>
+        </ol>
+      </div>
+    </div>
+
+    </div>
+
+  </section>
+
+  <br>
+
+  <section class="posts">
+    <div class="container">
+      <div class="page">
+        <h3>Сторінка, що змінює колір фону</h3>
+         <div class="details">
+           <ul>
+             <li>Кириченко Дар'я</li>
+             <li>2 Квітня, 2019</li>
+             <li>Інтернет-технології</li>
+          </ul>
+          </div>
+           <div class="content">
+             <p> Сторінка, що змінює свій фон на випадковий. Використовується Javascript. Реалізовано за допомогою циклу <code> while </code>. Сторінку було створено з метою ознайомлення з циклами мови Javascript <code>for</code> та <code>while</code></p>
+           </div>
+        </div>
+      </div>
+  </section>
+
+<script language="JavaScript">
+
+  function getRandomColor() {
+    var color = [];
+    while (color.length < 3) color.push(Math.floor(Math.random() * 255));
+    return 'rgb('+color.join(', ')+')';
+  }
+  function changebgr(i) {
+  document.writeln("<br>"+(i+1) );
+  timeid = /*setTimeout*/ setInterval(function() {document.body.style.backgroundColor = getRandomColor();},1000);
+  //clearTimeout(timeid);
+
+  }
+  var date = new Date();
+  var theHour = date.getHours();
+  var timeid;
+  for(var i =0;i<theHour;i++)
+  {
+  	changebgr(i);
+  }
+  clearInterval(timeid);
+
+  function printNumbersInterval( i ) {
+    var timerId = setInterval(function() {
+      document.writeln("<br>" + i )
+      if (i == 20) clearInterval(timerId);
+    }, 100);
+  }
+
+</script>
+
+
+
+</body>
+</html>

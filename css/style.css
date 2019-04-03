@@ -1,0 +1,54 @@
+body {
+  color: #0A384A;
+  font-family: arial;
+  background-color: #F4F3E1;
+}
+
+.row {
+  background-color: inherit;
+}
+
+.jumbotron {
+  background-color: inherit;
+}
+
+.breadcrumb {
+  background-color: #0a384a;
+  color: #f4f3e1;
+}
+
+.breadcrumb a {
+  color: #f4f3e1;
+}
+
+.page{
+    background-color:#fff;
+    padding:20px 15px;
+    margin-bottom:20px;
+}
+.page h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+.page p{
+    font-size:17px;
+    font-weight:500;
+}
+.page .details ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom:18px;
+}
+.page .details ul li{
+   float:left;
+   padding-right:15px;
+   font-size: 13px;
+   font-weight: 600;
+}
+.page .details ul li:last-child {
+  float: inherit;
+}
+.page h4{
+    font-size:13px;
+    font-weight:600;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Labs | Звіти</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript">
+
+  document.getElementById("sometext").innerHTML="";
+  function MyFunc() {
+    var text = document.getElementById("sometext").value;
+    //console.log(text.replace(/\s{2,}/g, " ").replace(/([.!?]+)(?=\S)/g, "$1 "));
+    //var str = text.replace(/(^\S*)?(?!^)\s/g, function($0,$1) {
+   //return $1 ? $0 : "";})
+   var str = text.replace(/ +/g,  // регулярний вираз,якщо симвло пере + повтороюється 1 чи більше разів, виконати ф-ю
+    function() { return " " });
+   text="";
+    var arr = str.split(" ");
+    arr.forEach( function (item,index) {
+      if(index%2==0) text+=item + "  ";
+    })
+     document.getElementById("result").innerHTML = text;
+     alert (text)
+
+  }
+  </script>
+</head>
+<body>
+  <section class="header">
+    <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <img src="media/dolores.png" alt="" class="rounded-circle">
+        <h1> Hello World <small>(✿◕‿◕)</small></h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="breadcrumps">
+    <div class="container">
+
+    <div class="row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a href="index.html"> Головна&nbsp;&nbsp;</a></li>
+          <span> / </span>
+          <li><a href="#">&nbsp;Стрічка&nbsp;&nbsp;</a></li>
+        </ol>
+      </div>
+    </div>
+
+    </div>
+
+  </section>
+
+  <br>
+
+  <section class="posts">
+    <div class="container">
+      <div class="page">
+        <h3>Стрічка (String)</h3>
+         <div class="details">
+           <ul>
+             <li>Кириченко Дар'я</li>
+             <li>2 Квітня, 2019</li>
+             <li>Інтернет-технології</li>
+          </ul>
+          </div>
+           <div class="content">
+             <form>
+               <div class="form">
+                 <textarea id="sometext" placeholder="Введіть будь-який текст"  cols="90" rows="3"></textarea>
+               </div>
+               <br>
+               <button class="btn btn-primary" onclick="MyFunc()">Натисни мене</button>
+             </form>
+             <br>
+             <form>
+               <div id="result"></div>
+             </form>
+           </div>
+        </div>
+      </div>
+  </section>
+
+
+
+</body>
+</html>
